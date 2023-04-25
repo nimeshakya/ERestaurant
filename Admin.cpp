@@ -122,7 +122,7 @@ bool Admin::mainMenuHandler()
 			system("cls");
 
 			welcome("Available Menus");
-			box(" ");
+			//box(" ");
 			// DISPLAY MENU
 			MenuItem menu;
 			gotoxy(40, 3);                                                //yo milauna baaki xa hai 
@@ -132,11 +132,12 @@ bool Admin::mainMenuHandler()
 			std::cin >> updateInput;
 			if (std::toupper(updateInput) == 'Y')
 			{
-				system("cls");
-				welcome("Updating Menu");
-				box(" ");
+				//system("cls");
+				std::cout << "Updating menu\n";
+				//welcome("Updating Menu");
+				//box(" ");
 				// update menu
-				gotoxy(40, 5);                                              //yo line ma ni gotoxy x coordinates aagadi gayena hera hai kasle herni ho 
+				gotoxy(40, 17);                                              //yo line ma ni gotoxy x coordinates aagadi gayena hera hai kasle herni ho 
 				MenuItem newItem;
 				newItem.inputData();
 				menu.updateMenu(newItem);
